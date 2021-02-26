@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tmdb_api_key">c1edacbc247d55feab86671719d52bc2</string>
+    <string name="tmdb_api_token">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjMWVkYWNiYzI0N2Q1NWZlYWI4NjY3MTcxOWQ1MmJjMiIsInN1YiI6IjVhYjkwMWI0OTI1MTQxNGQzYTAwMDA3OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.D8NYJzJG0AIJwRqLpSs2T-KmrC4k1_tiqEBkTCyGSqk</string>
+    <string name="tmdb_base_url">https://api.themoviedb.org/</string>
+    <string name="tmdb_image_url">https://image.tmdb.org/t/p/w500</string>
+
+    <string name="app_language">fr-FR</string>
+
+    <!-- TmDb parameters -->
+    <string name="tmdb_parameter_language">language</string>
+    <string name="tmdb_parameter_api_key">api_key</string>
+    <string name="tmdb_parameter_query">query</string>
+    <string name="tmdb_parameter_sort_by">sort_by</string>
+
+    <string name="tmdb_type_movie">movie</string>
+    <string name="tmdb_type_person">person</string>
+    <string name="tmdb_type_tv">tv</string>
+</resources>

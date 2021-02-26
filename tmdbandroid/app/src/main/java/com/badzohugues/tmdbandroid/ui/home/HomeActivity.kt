@@ -1,12 +1,19 @@
 package com.badzohugues.tmdbandroid.ui.home
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.badzohugues.tmdbandroid.R
+import androidx.appcompat.app.AppCompatActivity
+import com.badzohugues.tmdbandroid.data.domain.TmDbMulti
+import com.badzohugues.tmdbandroid.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityHomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
     }
 }
