@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">tmdbandroid</string>
+    <string name="hello_home_fragment">Home Fragment</string>
+    <string name="hello_search_fragment">Search fragment</string>
+    <string name="hello_example_activity">Example Activity</string>
+    <string name="go_to_search">Go to -> Search</string>
+    <string name="go_to_example">Go to -> Example</string>
 </resources>

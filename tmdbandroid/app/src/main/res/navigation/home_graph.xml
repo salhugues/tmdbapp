@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.salhugues.tmdbandroid.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/gotoSearch"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/gotoExample"
+            app:destination="@id/exampleActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.salhugues.tmdbandroid.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+        <argument
+            android:name="query"
+            android:defaultValue=""
+            app:argType="string" />
+        <deepLink app:uri="www.salhugues.com/search" />
+    </fragment>
+
+    <activity
+        android:id="@+id/exampleActivity"
+        android:name="com.salhugues.tmdbandroid.ui.ExampleActivity"
+        android:label="activity_example"
+        tools:layout="@layout/activity_example" />
+</navigation>
