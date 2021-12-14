@@ -1,8 +1,5 @@
 package com.salhugues.tmdbandroid.data.domain
 
-import com.salhugues.tmdbandroid.common.constants.MediaType
-import com.salhugues.tmdbandroid.data.DomainMapper
-
 data class Multi(
     val id: Int,
     val gender: Int?,
@@ -27,7 +24,7 @@ data class Multi(
     val voteAverage: Float?,
     val voteCount: Int?,
     val mediaType: String?
-) : DomainMapper<Multi, Movie, Person, Tv> {
+)/* : DomainMapper<Multi, Movie, Person, Tv> {
     override fun asMovie(item: Multi): Movie {
         return Movie(
             id,
@@ -82,4 +79,4 @@ data class Multi(
             voteCount ?: 0
         )
     }
-}
+}*/

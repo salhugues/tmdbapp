@@ -4,7 +4,6 @@ data class Movie(
     override var id: Int,
     override var mediaType: String = String(),
     val popularity: Float,
-    val adult: Boolean,
     val backdropPath: String,
     val genreIds: List<Int>,
     val originalLanguage: String,

@@ -3,8 +3,6 @@ package com.salhugues.tmdbandroid.data.db
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.salhugues.tmdbandroid.data.Mapper
-import com.salhugues.tmdbandroid.data.domain.Multi
 
 @Entity(tableName = "favorite")
 data class DbFavorite(
@@ -15,7 +13,6 @@ data class DbFavorite(
     @ColumnInfo(name = "name") val name: String,
     @ColumnInfo(name = "popularity") val popularity: Float,
     @ColumnInfo(name = "profile_path") val profilePath: String,
-    @ColumnInfo(name = "adult") val adult: Boolean,
     @ColumnInfo(name = "backdrop_path") val backdropPath: String,
     @ColumnInfo(name = "genre_ids") val genreIds: List<Int>,
     @ColumnInfo(name = "origin_country") val originCountry: List<String>,
@@ -32,36 +29,4 @@ data class DbFavorite(
     @ColumnInfo(name = "vote_count") val voteCount: Int,
     @ColumnInfo(name = "media_type") val mediaType: String,
     @ColumnInfo(name = "is_favorite") val isFavorite: Boolean
-) : Mapper<DbFavorite, Multi> {
-    override fun transform(item: DbFavorite): Multi {
-        return Multi(
-            id,
-            gender,
-            item.knownFor.map { transform(it) },
-            knownForDepartment,
-            name,
-            popularity,
-            profilePath,
-            adult,
-            backdropPath,
-            genreIds,
-            originCountry,
-            originalLanguage,
-            originalTitle,
-            originalName,
-            overview,
-            posterPath,
-            releaseDate,
-            firstAirDate,
-            title,
-            video,
-            voteAverage,
-            voteCount,
-            mediaType
-        )
-    }
-
-    override fun revert(item: Multi): DbFavorite {
-        TODO("Not yet implemented")
-    }
-}
+)
