@@ -4,6 +4,6 @@ import com.salhugues.tmdbandroid.common.DataStateWrapper
 import com.salhugues.tmdbandroid.domain.model.Movie
 import kotlinx.coroutines.Deferred
 
-interface MovieUseCase {
+interface HomeUseCase {
     suspend fun getNowPlayingMovies(): Deferred<DataStateWrapper<List<Movie>>>
 }

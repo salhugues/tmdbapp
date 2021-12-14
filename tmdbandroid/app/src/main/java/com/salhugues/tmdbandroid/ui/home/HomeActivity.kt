@@ -6,10 +6,12 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.salhugues.tmdbandroid.databinding.ActivityHomeBinding
+import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
 private const val TAG = "HOME"
 
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
