@@ -1,4 +1,4 @@
-package com.salhugues.tmdbandroid.data.domain
+package com.salhugues.tmdbandroid.domain.model
 
 data class Person(
     override var id: Int,

@@ -1,3 +1,14 @@
 package com.salhugues.tmdbandroid.data.api.service
 
-interface MovieApiService
+import com.salhugues.tmdbandroid.data.api.model.ApiResult
+import retrofit2.Response
+import retrofit2.http.GET
+import retrofit2.http.Query
+
+interface MovieApiService {
+    @GET("/3/now_playing")
+    suspend fun nowPlaying(
+        @Query("api_key") apiKey: String,
+        @Query("language") language: String
+    ): Response<ApiResult>
+}

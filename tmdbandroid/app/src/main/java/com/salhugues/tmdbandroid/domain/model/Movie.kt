@@ -1,4 +1,4 @@
-package com.salhugues.tmdbandroid.data.domain
+package com.salhugues.tmdbandroid.domain.model
 
 data class Movie(
     override var id: Int,

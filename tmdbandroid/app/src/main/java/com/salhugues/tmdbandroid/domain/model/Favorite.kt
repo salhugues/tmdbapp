@@ -1,4 +1,4 @@
-package com.salhugues.tmdbandroid.data.domain
+package com.salhugues.tmdbandroid.domain.model
 
 open class Favorite {
     open var id: Int = 0

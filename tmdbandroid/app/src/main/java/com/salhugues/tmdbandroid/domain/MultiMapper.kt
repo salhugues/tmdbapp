@@ -1,4 +1,4 @@
-package com.salhugues.tmdbandroid.data.domain
+package com.salhugues.tmdbandroid.domain
 
 interface MultiMapper<S, M, P, T> {
     fun toMovie(item: S): M
