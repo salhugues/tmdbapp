@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tmdb_base_url">https://api.themoviedb.org</string>
+    <string name="tmdb_image_url">https://image.tmdb.org/t/p/w500</string>
+
+    <string name="app_language">fr-FR</string>
+
+    <!-- TmDb parameters -->
+    <string name="tmdb_parameter_language">language</string>
+    <string name="tmdb_parameter_api_key">api_key</string>
+    <string name="tmdb_parameter_query">query</string>
+    <string name="tmdb_parameter_sort_by">sort_by</string>
+
+    <string name="tmdb_type_movie">movie</string>
+    <string name="tmdb_type_person">person</string>
+    <string name="tmdb_type_tv">tv</string>
+</resources>
