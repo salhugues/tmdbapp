@@ -15,7 +15,7 @@ class HomeViewModel @Inject constructor(
     private val homeUseCase: HomeUseCase
 ) : ViewModel() {
 
-    private val _homeState = MutableStateFlow<DataState<List<Movie>>>(DataState.None)
+    private val _homeState = MutableStateFlow<DataState<List<Movie>>>(DataState.Loading)
     val homeState
         get() = _homeState
 
@@ -23,7 +23,6 @@ class HomeViewModel @Inject constructor(
         viewModelScope.launch {
             when (state) {
                 is HomeStateAction.GetNowPlayingAction -> {
-                    _homeState.value = DataState.Loading
                     _homeState.value = homeUseCase.requestNowPlayingMovies().await()
                 }
             }
