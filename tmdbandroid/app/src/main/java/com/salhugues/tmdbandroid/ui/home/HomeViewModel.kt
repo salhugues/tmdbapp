@@ -23,7 +23,7 @@ class HomeViewModel @Inject constructor(
         viewModelScope.launch {
             when (state) {
                 is HomeStateAction.GetNowPlayingAction -> {
-                    _homeState.value = homeUseCase.requestNowPlayingMovies().await()
+                    _homeState.value = homeUseCase.requestNowPlayingMovies()
                 }
             }
         }
