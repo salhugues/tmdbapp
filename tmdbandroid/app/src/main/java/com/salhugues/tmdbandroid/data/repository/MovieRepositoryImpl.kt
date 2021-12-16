@@ -1,6 +1,6 @@
 package com.salhugues.tmdbandroid.data.repository
 
-import com.salhugues.tmdbandroid.common.DataStateWrapper
+import com.salhugues.tmdbandroid.common.DataState
 import com.salhugues.tmdbandroid.data.api.datasource.MovieApiDatasource
 import com.salhugues.tmdbandroid.domain.model.Movie
 import kotlinx.coroutines.CoroutineDispatcher
@@ -14,7 +14,7 @@ class MovieRepositoryImpl @Inject constructor(
     private val dispatcher: CoroutineDispatcher
 ) : MovieRepository {
 
-    override suspend fun fetchNowPlayingMoviesAsync(): Deferred<DataStateWrapper<List<Movie>>> {
+    override suspend fun fetchNowPlayingMoviesAsync(): Deferred<DataState<List<Movie>>> {
         return withContext(dispatcher) {
             async {
                 apiMovieDatasource.nowPlaying()

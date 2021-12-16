@@ -1,12 +1,12 @@
 package com.salhugues.tmdbandroid.data.api.datasource
 
 import com.salhugues.tmdbandroid.BuildConfig
-import com.salhugues.tmdbandroid.common.DataStateWrapper
+import com.salhugues.tmdbandroid.common.DataState
 import com.salhugues.tmdbandroid.data.api.model.ApiMulti
 import com.salhugues.tmdbandroid.data.api.service.MovieApiService
+import com.salhugues.tmdbandroid.data.api.util.ApiUtil
 import com.salhugues.tmdbandroid.domain.DomainMapper
 import com.salhugues.tmdbandroid.domain.model.Movie
-import java.lang.Exception
 import javax.inject.Inject
 
 class MovieApiDatasource @Inject constructor(
@@ -31,24 +31,21 @@ class MovieApiDatasource @Inject constructor(
         )
     }
 
-    suspend fun nowPlaying(): DataStateWrapper<List<Movie>> {
-        val result = movieApiService.nowPlaying(
-            BuildConfig.API_KEY,
-            "fr-FR"
-        )
+    suspend fun nowPlaying(): DataState<List<Movie>> {
+        val result = movieApiService.nowPlaying(BuildConfig.API_KEY)
 
         return try {
             if (result.isSuccessful) {
-                DataStateWrapper.Success(
+                DataState.Success(
                     result.body()?.results?.map {
                         mapToDomain(it)
                     } ?: emptyList()
                 )
             } else {
-                DataStateWrapper.Success(emptyList())
+                DataState.Error(ApiUtil.handleApiError(result.code()))
             }
-        } catch (exception: Exception) {
-            DataStateWrapper.Error(exception, null)
+        } catch (cause: Throwable) {
+            DataState.Error(message = cause.message)
         }
     }
 }
