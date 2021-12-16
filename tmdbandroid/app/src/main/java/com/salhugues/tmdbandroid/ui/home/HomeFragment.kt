@@ -55,7 +55,7 @@ class HomeFragment : Fragment() {
     private fun subscribeToObservers() {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                homeViewModel.movieHomeState.collect { dataState ->
+                homeViewModel.homeState.collect { dataState ->
                     when (dataState) {
                         is DataState.Success -> {
                             context?.let {
