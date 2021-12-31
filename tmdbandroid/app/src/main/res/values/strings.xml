@@ -11,4 +11,9 @@
     <string name="error_not_found">404 not found</string>
     <string name="error_server">503 server error</string>
     <string name="error_unknown">Unknown error</string>
+
+    <!--  Bottom Nav Menu  -->
+    <string name="menu_home">Home</string>
+    <string name="menu_search">Tv shows</string>
+    <string name="menu_favorites">Favorites</string>
 </resources>
