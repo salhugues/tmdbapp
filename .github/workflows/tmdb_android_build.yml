@@ -1,12 +1,13 @@
-name: Android Build
+name: Android Check Build
 
-on: pull_request
+on: 
+  push:
+    paths: 
+      - 'tmdbandroid/**'
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v1
 
