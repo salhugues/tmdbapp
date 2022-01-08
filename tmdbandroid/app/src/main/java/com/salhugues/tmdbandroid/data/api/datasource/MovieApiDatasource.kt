@@ -32,7 +32,7 @@ class MovieApiDatasource @Inject constructor(
     }
 
     suspend fun nowPlaying(): DataState<List<Movie>> {
-        val result = movieApiService.nowPlaying(BuildConfig.TMDB_API_KEY)
+        val result = movieApiService.nowPlaying(BuildConfig.API_KEY)
 
         return try {
             if (result.isSuccessful) {
