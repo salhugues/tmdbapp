@@ -12,7 +12,7 @@ android {
     buildToolsVersion '30.0.3'
 
     defaultConfig {
-        applicationId "com.badzohugues.tmdbandroid"
+        applicationId "com.salhugues.tmdbandroid"
         minSdkVersion 21
         targetSdkVersion 31
         versionCode 1
