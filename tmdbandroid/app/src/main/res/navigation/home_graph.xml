@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.salhugues.tmdbandroid.ui.home.HomeFragment"
+        android:name="com.salhugues.tmdbandroid.app.ui.home.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.salhugues.tmdbandroid.ui.search.SearchFragment"
+        android:name="com.salhugues.tmdbandroid.app.ui.search.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search">
         <argument
@@ -33,7 +33,7 @@
 
     <activity
         android:id="@+id/exampleActivity"
-        android:name="com.salhugues.tmdbandroid.ui.ExampleActivity"
+        android:name="com.salhugues.tmdbandroid.app.ui.ExampleActivity"
         android:label="activity_example"
         tools:layout="@layout/activity_example" />
 </navigation>
