@@ -15,7 +15,6 @@ import com.salhugues.tmdbandroid.R
 import com.salhugues.tmdbandroid.common.DataState
 import com.salhugues.tmdbandroid.databinding.FragmentHomeBinding
 import com.salhugues.tmdbandroid.errorMessage
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
@@ -28,7 +27,6 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         binding = FragmentHomeBinding.inflate(
             inflater,
             container,

@@ -6,7 +6,9 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "favorite")
 data class DbFavorite(
-    @PrimaryKey @ColumnInfo(name = "id") val id: Int,
+    @PrimaryKey
+    @ColumnInfo(name = "id")
+    val id: Int,
     @ColumnInfo(name = "gender") val gender: Int,
     @ColumnInfo(name = "known_for") val knownFor: List<DbFavorite>,
     @ColumnInfo(name = "known_for_department") val knownForDepartment: String,
